@@ -1,4 +1,4 @@
-export const waitTwoSeconds = (payload, thunkAPI) =>
+export const waitTwoSeconds = () =>
   new Promise((resolve) => {
     setTimeout(() => {
       resolve();

@@ -10,8 +10,7 @@ import {
 } from './components/styles';
 import nextId from 'react-id-generator';
 import { useDispatch, useSelector } from 'react-redux';
-// import { __addToDo, __deleteTodo } from './redux/modules/todosSlice';
-import { addTodo,deleteTodo } from './redux/modules/todosSlice';
+import { __addToDo, __deleteTodo } from './redux/modules/todosSlice';
 
 function App() {
   const id = nextId();
@@ -31,13 +30,13 @@ function App() {
           title,
           body,
       };
-      dispatch(addTodo(todo));
+      dispatch(__addToDo(todo));
       console.log("newtodo", todo)
   }
   };
  
   const onDeleteTodo = (id) => {
-    dispatch(deleteTodo(id));
+    dispatch(__deleteTodo(id));
     console.log("id", id)
   };
 
